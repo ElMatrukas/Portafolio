@@ -1,0 +1,125 @@
+#fondo-proyectos{
+    background-color: hsl(from var(--surface)h s calc(l + 10));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.Proyectos{
+    align-self: center;
+    width: 90%;
+    min-height: 40vw;
+    margin: 50px 0;
+    border-radius: 30px;
+    padding: 20px;
+    color: var(--text-crl);
+    position: relative;
+    z-index: 2;
+    background: 
+    hsl(from var(--header-clr)h s l /.2 );
+    backdrop-filter: blur(12px); 
+    
+}
+.Proyectos::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#6b6464, #544d4d) border-box;
+    mask:
+        linear-gradient(black 0 0) border-box,
+        linear-gradient(black 0 0) padding-box;
+    mask-composite: subtract;
+}
+.Proyectos h1{
+    font-size: 30px;
+    padding-bottom: 20px;
+    text-shadow:  rgb(0, 0, 0, .5) 0px 0px 10px;
+}
+.Pro{
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    transition: all .3s;
+    grid-template-columns: repeat(auto-fit, 250px);
+    margin-bottom: 50px;
+    
+    
+}
+.Pro::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    background:
+        linear-gradient(#6b6464, #544d4d) border-box;
+    mask:
+        linear-gradient(black 0 0) border-box,
+        linear-gradient(black 0 0) padding-box;
+    mask-composite: subtract;
+}
+.Tarjetas{
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    justify-self: center;
+    border-radius: 30px;
+    box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 10px;
+    align-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    position: relative;
+    background: 
+    hsl(from var(--header-clr)h s l /.2 );
+    backdrop-filter: blur(12px);
+
+    scale: .2; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
+}
+.Tarjetas p{
+    justify-self: center;
+}
+.Tarjetas:hover { 
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 20px;
+    transform: scale(1.05);
+}
+.Tarjetas p:hover{
+    justify-self: center;
+}
+@media (min-width:768px) {
+    .Proyectos{
+        margin: 50px;
+    }
+    .Pro{
+        grid-template-columns: repeat(auto-fit, 300px);
+        justify-content: center;
+        transition: all .3s;
+        gap: 40px 20px;
+    }
+    .Proyectos h1{
+        font-size: 40px;
+    }
+    .Tarjetas p{
+        font-size: 25px;
+    }
+    .Tarjetas{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (min-width: 1000px) {
+    .Proyectos{
+        width: 80%;
+        margin: 50px auto;
+        transition: all .3s;
+    }
+}

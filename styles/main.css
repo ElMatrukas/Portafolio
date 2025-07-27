@@ -1,0 +1,102 @@
+:root {
+  --surface: hsl(0, 0%, 70%);
+  --text-crl: hsl(0, 0%, 0%);
+  --text-crl-I: hsl(0, 0%, 0%);
+  --header-clr:hsl(240, 20%, 40%);
+  --secundary-color: hsl(44, 93%, 58%);
+  --clr-1:hsl(0, 0%, 25%);
+  --clr-2:hsl(0, 0%, 40%);
+  --clr-3:hsl(0, 0%, 55%);
+  --gradient-glow: 
+    var(--clr-1), 
+    var(--clr-2),
+    var(--clr-2),
+    var(--clr-3), 
+    var(--clr-3),
+    var(--clr-1);
+}
+.darkmode{
+  --surface: hsl(0, 0%, 20%);
+  --text-crl: hsl(0, 0%, 100%);
+  --text-crl-I: hsl(0, 0%, 0%);
+  --header-clr:hsl(255, 44%, 18%);
+  --clr-1:hsl(0, 0%, 100%);
+  --clr-2:hsl(0, 0%, 50%);
+  --clr-3:hsl(0, 0%, 9%);
+  --gradient-glow: 
+    var(--clr-1), 
+    var(--clr-2),
+    var(--clr-2),
+    var(--clr-3), 
+    var(--clr-3),
+    var(--clr-1);
+
+}
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background: 
+  hsl(from var(--header-clr) h s calc(l + 5));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#theme-switch svg{
+  color: hsl(from var(--text-crl) h s l);
+}
+#theme-switch svg:last-child{
+  display: none;
+}
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body{
+  overflow-x: clip;
+
+  background: var(--surface);
+  font-family: "Cinzel", serif;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+p{
+  color: hsl(from var(--text-crl) h s calc(l - 30)) !important;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+button{
+  color: white;
+}
+html{
+  scroll-behavior: smooth;
+}
+article {
+  flex-grow: 1;
+}
+section[id]{
+  scroll-margin-top: 80px;
+}
+#Skills{
+  scroll-margin-top: 70px;
+}
+section{
+  min-height: 100vh;
+}

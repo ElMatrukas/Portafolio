@@ -1,0 +1,37 @@
+footer{
+    background:
+    hsl(from var(--header-clr)h s calc(l - 5) );
+    z-index: 1;
+    width: 100%;
+    height: 50vw;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.content-footer{
+    margin-top: 50%;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40%;
+    background: hsl(from var(--header-clr)h s calc(l - 10) );
+}
+.redes {
+    list-style: none;
+}
+.redes li{
+    font-size: 1.5rem;
+    align-items: center;
+}
+.bi-linkedin{
+    width: 30px;
+    height: 30px;
+}
+@media (max-width: 768px){
+}
+

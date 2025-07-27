@@ -1,0 +1,115 @@
+.Herosetion {
+    width: 100vw;
+    height: 90vh;
+    margin: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 230px;
+    width: max-content;
+    position: relative;
+
+    animation: scale-down linear;
+    animation-timeline: view();
+    animation-range: exit -400px;
+}
+.main-content > :not(.CV-a) {
+    animation: fade-out-content linear;
+    animation-timeline: view();
+    animation-range: exit -400px;
+}
+@keyframes scale-down {
+    to {
+        scale: 0.5;
+    }
+}
+@keyframes fade-out-content {
+    to {
+        opacity: 0;
+    }
+}
+.Nombre {
+    color: white;
+    font-size: 2.5rem;
+}
+.CV-a svg{
+    width: 2rem;
+    height: 1.5rem;
+}
+.CV-a {
+    width: 20rem;
+    height: 3rem;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 2rem ;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+
+    color: black !important;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    transition: scale 300ms;
+}
+.CV-a::before {
+    content: "";
+    z-index: -1;
+    inset: 0;
+    border-radius: 2rem;
+    position: absolute;
+
+    background: linear-gradient(to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(4px);
+    background-clip: padding-box;
+}
+.CV-a:hover{
+    scale: 1.1;
+    transition: scale 300ms;
+}
+@media (max-width:500px) {
+    .Nombre {
+        scale: .8;
+    }
+    .CV-a{
+        scale: .8;
+    }
+    .CV-a:hover{
+        scale: .9;
+    }
+}
+.img_fondo{
+    overflow-x: hidden;
+    z-index: 1;
+    inset: 0;
+    position: absolute;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    
+    animation: header-img-animation linear forwards;
+    animation-timeline:view() ;
+    animation-range: exit;
+}
+@keyframes header-img-animation{
+    25% {opacity: .8;}
+    85%, 100%{opacity: 0; scale: 3; overflow: hidden;}
+}

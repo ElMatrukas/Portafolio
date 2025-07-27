@@ -1,0 +1,201 @@
+.fondo-skills{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.Skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 90%;
+    min-height: 30vw;
+    margin: 50px 0;
+    border-radius: 30px;
+    padding: 20px;
+    color: var(--text-crl);
+    z-index: 1;
+    
+    position: relative; 
+    background: 
+   hsl(from var(--header-clr) h s l /.2);
+    backdrop-filter: blur(12px);  
+    
+    scale: .2; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 300px 500px;
+}
+@keyframes fade-in{
+    to {scale: 1; opacity: 1;}
+}
+@media (min-width: 800px) {
+    .Skills{
+        scale: .2; opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: 400px 700px;
+    }
+    .scroller{
+       margin-inline: 15%;
+       max-width: 800px;
+
+    }
+}
+.Skills::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#6b6464, #544d4d) border-box;
+    mask:
+        linear-gradient(black 0 0) border-box,
+        linear-gradient(black 0 0) padding-box;
+    mask-composite: subtract;
+}
+.Skills h1{
+    font-size: 30px;
+    text-shadow:  rgb(0, 0, 0, .5) 0px 0px 10px;
+}
+.scroller{
+    max-width: 600px;
+    padding: 20px 15px;
+}
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent);
+  mask: linear-gradient(90deg,
+   transparent,
+    white 20%,
+    white 80%,
+    transparent);
+}
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+.scroller_inner{
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.tag-list{
+    list-style: none;
+}
+.len{
+    width: 60%;
+    justify-self: center;
+    background: hsl(from var(--header-clr) h s l / 0.2);
+    backdrop-filter: blur(12px);;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 20px;
+}
+.len:hover{
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 20px;
+    transform: scale(1.05);
+
+}
+
+@media (min-width: 768px) {
+    .Skills h1{
+        font-size: 40px;
+        transition: all .3s;
+    }
+}
+@media (min-width: 1000px) {
+    .Skills{
+        width: 80%;
+        margin: 50px auto;
+        transition: all .3s;
+
+        scale: .2; opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: 200px 400px;
+    }
+}
+@media (min-width: 1200px) {
+    .Skills{
+        width: 80%;
+        margin: 50px auto;
+        transition: all .3s;
+
+        scale: .2; opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: 200px 500px;
+    }
+    .scroller{
+       margin-inline: 20%;
+       max-width: 1000px;
+
+    }
+}
+@media (min-width: 1400px) {
+    .Skills{
+        width: 80%;
+        margin: 50px auto;
+        transition: all .3s;
+
+        scale: .2; opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: 300px 800px;
+    }
+}
+.custom-shape-divider-bottom-1753577739 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom-1753577739 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+.custom-shape-divider-bottom-1753577739 .shape-fill {
+    fill: hsl(from var(--surface)h s calc(l + 10));
+}

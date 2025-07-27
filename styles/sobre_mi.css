@@ -1,0 +1,95 @@
+@property --glow-deg {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: -90deg;
+}
+.Sobre_mi{
+    margin: 5rem;
+    margin-bottom: 10rem;
+    margin-left: 0;
+    padding: 8rem 3rem;
+    min-height: 40vw;
+    max-width: 70ch;
+    color: var(--text-crl);
+    z-index: 2;
+    
+    border: 2px solid transparent;
+    border-left: 0;
+    border-radius: 0 100vw 100vw 0;
+    background:
+    linear-gradient(var(--surface) 0 0) padding-box, 
+    conic-gradient(from var(--glow-deg),
+    var(--gradient-glow)) border-box;
+
+    position: relative;
+    isolation: isolate;
+
+    animation: glow 10s infinite linear;
+}
+@keyframes glow {
+    100%{
+        --glow-deg: 270deg
+    }
+}  
+.Sobre_mi::after,
+.Sobre_mi::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    
+}
+.Sobre_mi::before {
+    z-index: -1;
+    background: hsl(from var(--header-clr) h s calc(l + 10));
+    inset: .5rem;
+    scale: 1.2 1;
+    transform-origin: right;
+    filter: blur(1rem);
+
+}
+.Sobre_mi::after {
+    z-index: -2;
+    background: conic-gradient(from var(--glow-deg), var(--gradient-glow));
+    inset: -1.5rem;
+    filter: blur(1rem);
+    opacity: .5;
+    
+}
+.Sobre_mi h1{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.Sobre_mi p{
+    font-size: 20px;
+}
+@media (min-width: 768px) {
+    .Sobre_mi{
+        margin: 10rem;
+        margin-left: 0;
+        margin-bottom: 20rem;
+        padding: 8rem 3rem;
+        min-height: 40vw;
+        max-width: 80ch;
+        transition: all .3s;
+    }
+    
+    .Sobre_mi h1{
+        font-size: 40px;
+        transition: all .3s;
+    }
+    .Sobre_mi p{
+        font-size: 30px;
+        transition: all .3s;
+    }
+}
+@media (min-width: 1000px) {
+    .Sobre_mi{
+        margin: 10rem;
+        margin-left: 0;
+        margin-bottom: 20rem;
+        padding: 8rem 3rem;
+        max-width: 100ch;
+        min-height: 30vw;
+        transition: all .3s;
+    }
+}
