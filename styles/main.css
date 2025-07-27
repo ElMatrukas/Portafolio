@@ -34,6 +34,11 @@
     var(--clr-1);
 
 }
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
 #theme-switch{
   height: 50px;
   width: 50px;
@@ -69,23 +74,70 @@ html, body {
 }
 body{
   overflow-x: clip;
-
   background: var(--surface);
-  font-family: 'Gambarino-Regular';
+  
 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+h1{
+  font-family: "DM Serif Text", serif;
+  font-size: 3.5rem;
+  letter-spacing: -2px;
+}
+h2{
+  font-family: "DM Serif Text", serif;
+  font-size: 2.25rem;
+}
+h3{
+  font-family: "DM Serif Text", serif;
+  font-size: 2.25rem;
+}
 p{
   color: hsl(from var(--text-crl) h s calc(l - 30)) !important;
+  font-family: "DM Sans", sans-serif ;
+  font-size: 2rem;
+  line-height: calc(2rem * 1.3);
 }
 a {
+  font-family: "DM Sans", sans-serif ;
+  letter-spacing: .5px;
   text-decoration: none;
   color: white;
 }
 button{
+  font-family: "DM Sans", sans-serif ;
+  letter-spacing: 1px;
   color: white;
+}
+@media (min-width: 768px){
+  h1{
+    font-size: 5rem;
+  }
+  h2{
+    font-size: 3.25rem;
+  }
+  h3{
+    font-size: 3rem;
+  }
+  p{
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1000px){
+  h1{
+    font-size: 7rem;
+  }
+  h2{
+    font-size: 4.25rem;
+  }
+   h3{
+    font-size: 3.75rem;
+  }
+  p{
+    font-size: 2.5rem;
+  }
 }
 html{
   scroll-behavior: smooth;
@@ -101,13 +153,4 @@ section[id]{
 }
 section{
   min-height: 100vh;
-}
-@font-face {
-  font-family: 'Gambarino-Regular';
-  src: url('../fonts/Gambarino-Regular.woff2') format('woff2'),
-       url('../fonts/Gambarino-Regular.woff') format('woff'),
-       url('../fonts/Gambarino-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
 }

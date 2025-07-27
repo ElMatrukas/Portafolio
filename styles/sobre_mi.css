@@ -56,12 +56,7 @@
     
 }
 .Sobre_mi h1{
-    font-size: 4.5rem;
-    letter-spacing: 5px;
     padding-bottom: 20px;
-}
-.Sobre_mi p{
-    font-size: 30px;
 }
 @media (min-width: 768px) {
     .Sobre_mi{
@@ -75,11 +70,9 @@
     }
     
     .Sobre_mi h1{
-        font-size: 4rem;
         transition: all .3s;
     }
     .Sobre_mi p{
-        font-size: 2rem;
         transition: all .3s;
     }
 }
@@ -94,11 +87,9 @@
         transition: all .3s;
     }
     .Sobre_mi h1{
-        font-size: 5rem;
         transition: all .3s;
     }
     .Sobre_mi p{
-        font-size: 3rem;
         transition: all .3s;
     }
 }

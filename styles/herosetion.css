@@ -40,11 +40,13 @@
 }
 .Nombre {
     color: var(--text-crl);
-    font-size: 2.5rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    padding-inline: 1rem;
+    backdrop-filter: blur(8px);
 }
-.main-content h2{
+.main-content h1{
     color: var(--text-crl);
-    font-size: 2rem;
 }
 .CV-a svg{
     width: 2rem;
@@ -90,6 +92,9 @@
 }
 @media (max-width:500px) {
     .Nombre {
+        scale: .8;
+    }
+    .main-content h1{
         scale: .8;
     }
     .CV-a{

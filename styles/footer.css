@@ -32,6 +32,8 @@ footer{
     width: 30px;
     height: 30px;
 }
-@media (max-width: 768px){
+@media (max-width: 535px) {
+    h3{
+        font-size: 1.75rem;
+    }
 }
-
