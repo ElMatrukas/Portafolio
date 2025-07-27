@@ -39,8 +39,12 @@
     }
 }
 .Nombre {
-    color: white;
+    color: var(--text-crl);
     font-size: 2.5rem;
+}
+.main-content h2{
+    color: var(--text-crl);
+    font-size: 2rem;
 }
 .CV-a svg{
     width: 2rem;

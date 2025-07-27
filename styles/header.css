@@ -3,7 +3,7 @@
 .topheader {
   box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 10px;
   position: sticky;
-  background-color: var(--header-clr);
+  background-color: var(--primary-color);
   left: 0;
   top: 0;
   width: 100%;

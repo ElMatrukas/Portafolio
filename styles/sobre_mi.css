@@ -40,7 +40,7 @@
 }
 .Sobre_mi::before {
     z-index: -1;
-    background: hsl(from var(--header-clr) h s calc(l + 10));
+    background: hsl(from var(--primary-color) h s calc(l + 15));
     inset: .5rem;
     scale: 1.2 1;
     transform-origin: right;
@@ -56,11 +56,12 @@
     
 }
 .Sobre_mi h1{
-    font-size: 30px;
+    font-size: 4.5rem;
+    letter-spacing: 5px;
     padding-bottom: 20px;
 }
 .Sobre_mi p{
-    font-size: 20px;
+    font-size: 30px;
 }
 @media (min-width: 768px) {
     .Sobre_mi{
@@ -74,11 +75,11 @@
     }
     
     .Sobre_mi h1{
-        font-size: 40px;
+        font-size: 4rem;
         transition: all .3s;
     }
     .Sobre_mi p{
-        font-size: 30px;
+        font-size: 2rem;
         transition: all .3s;
     }
 }
@@ -90,6 +91,14 @@
         padding: 8rem 3rem;
         max-width: 100ch;
         min-height: 30vw;
+        transition: all .3s;
+    }
+    .Sobre_mi h1{
+        font-size: 5rem;
+        transition: all .3s;
+    }
+    .Sobre_mi p{
+        font-size: 3rem;
         transition: all .3s;
     }
 }

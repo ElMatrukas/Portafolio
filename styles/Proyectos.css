@@ -1,5 +1,5 @@
 #fondo-proyectos{
-    background-color: hsl(from var(--surface)h s calc(l + 10));
+    background-color: hsl(from var(--primary-color)h s calc(l + 10));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
 .Proyectos{
     align-self: center;
     width: 90%;
-    min-height: 40vw;
+    min-height: 20vw;
     margin: 50px 0;
     border-radius: 30px;
     padding: 20px;
@@ -18,7 +18,7 @@
     position: relative;
     z-index: 2;
     background: 
-    hsl(from var(--header-clr)h s l /.2 );
+    hsl(from var(--primary-colorr)h s l /.2 );
     backdrop-filter: blur(12px); 
     
 }
@@ -37,7 +37,8 @@
     mask-composite: subtract;
 }
 .Proyectos h1{
-    font-size: 30px;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
     padding-bottom: 20px;
     text-shadow:  rgb(0, 0, 0, .5) 0px 0px 10px;
 }
@@ -69,15 +70,16 @@
     height: 250px;
     padding: 20px;
     justify-self: center;
+    align-content: center;
+    position: relative;
+    z-index: 1;
+    
+    background: 
+    hsl(from var(--primary-color)h s l /.2 );
+    backdrop-filter: blur(12px);
     border-radius: 30px;
     box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 10px;
-    align-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1;
-    position: relative;
-    background: 
-    hsl(from var(--header-clr)h s l /.2 );
-    backdrop-filter: blur(12px);
 
     scale: .2; opacity: 0;
     animation: fade-in linear forwards;
@@ -86,14 +88,14 @@
 }
 .Tarjetas p{
     justify-self: center;
+    color: var(--text-crl) !important;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 .Tarjetas:hover { 
     align-content: center;
     box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 20px;
     transform: scale(1.05);
-}
-.Tarjetas p:hover{
-    justify-self: center;
 }
 @media (min-width:768px) {
     .Proyectos{
@@ -106,10 +108,10 @@
         gap: 40px 20px;
     }
     .Proyectos h1{
-        font-size: 40px;
+        font-size: 3rem;
     }
     .Tarjetas p{
-        font-size: 25px;
+        font-size: 1.75rem;
     }
     .Tarjetas{
         width: 300px;
@@ -121,5 +123,11 @@
         width: 80%;
         margin: 50px auto;
         transition: all .3s;
+    }
+    .Proyectos h1{
+        font-size: 5rem;
+    }
+    .Tarjetas p{
+        font-size: 2.25rem;
     }
 }

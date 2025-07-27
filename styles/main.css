@@ -1,8 +1,9 @@
 :root {
-  --surface: hsl(0, 0%, 70%);
-  --text-crl: hsl(0, 0%, 0%);
+  /* --surface: hsl(0, 0%, 70%); */
+  --surface: hsl(from var(--primary-color)h s calc(l + 20));
+  --text-crl: hsl(0, 0%, 100%);
   --text-crl-I: hsl(0, 0%, 0%);
-  --header-clr:hsl(240, 20%, 40%);
+  --primary-color:hsl(240, 20%, 40%);
   --secundary-color: hsl(44, 93%, 58%);
   --clr-1:hsl(0, 0%, 25%);
   --clr-2:hsl(0, 0%, 40%);
@@ -16,10 +17,11 @@
     var(--clr-1);
 }
 .darkmode{
-  --surface: hsl(0, 0%, 20%);
+  /* --surface: hsl(0, 0%, 20%); */
+  --surface: hsl(from var(--primary-color)h s calc(l + 40));
   --text-crl: hsl(0, 0%, 100%);
   --text-crl-I: hsl(0, 0%, 0%);
-  --header-clr:hsl(255, 44%, 18%);
+  --primary-color:hsl(255, 44%, 18%);
   --clr-1:hsl(0, 0%, 100%);
   --clr-2:hsl(0, 0%, 50%);
   --clr-3:hsl(0, 0%, 9%);
@@ -38,7 +40,7 @@
   padding: 0;
   border-radius: 50%;
   background: 
-  hsl(from var(--header-clr) h s calc(l + 5));
+  hsl(from var(--primary-color) h s calc(l + 5));
 
   display: flex;
   justify-content: center;
@@ -69,7 +71,7 @@ body{
   overflow-x: clip;
 
   background: var(--surface);
-  font-family: "Cinzel", serif;
+  font-family: 'Gambarino-Regular';
 
   display: flex;
   flex-direction: column;
@@ -99,4 +101,13 @@ section[id]{
 }
 section{
   min-height: 100vh;
+}
+@font-face {
+  font-family: 'Gambarino-Regular';
+  src: url('../fonts/Gambarino-Regular.woff2') format('woff2'),
+       url('../fonts/Gambarino-Regular.woff') format('woff'),
+       url('../fonts/Gambarino-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }

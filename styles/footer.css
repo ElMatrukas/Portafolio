@@ -1,6 +1,6 @@
 footer{
     background:
-    hsl(from var(--header-clr)h s calc(l - 5) );
+    hsl(from var(--primary-color)h s calc(l - 5) );
     z-index: 1;
     width: 100%;
     height: 50vw;
@@ -19,7 +19,7 @@ footer{
     justify-content: space-around;
     align-items: center;
     gap: 40%;
-    background: hsl(from var(--header-clr)h s calc(l - 10) );
+    background: hsl(from var(--primary-color)h s calc(l - 10) );
 }
 .redes {
     list-style: none;
