@@ -36,7 +36,7 @@
         linear-gradient(black 0 0) padding-box;
     mask-composite: subtract;
 }
-.Proyectos h1{
+.Proyectos h2{
     padding-bottom: 20px;
     text-shadow:  rgb(0, 0, 0, .5) 0px 0px 10px;
 }
