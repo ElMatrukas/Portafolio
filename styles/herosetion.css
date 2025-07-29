@@ -76,7 +76,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     position: relative;
 
-    color: black !important;
+    color: var(--text-crl-I)!important;
     font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
